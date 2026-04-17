@@ -1,0 +1,62 @@
+ampere_bf16_s16816gemm_bf16_64x64_ldg8_f2f_stages_64x5_tn
+ampere_bf16_s16816gemm_bf16_64x64_sliced1x2_ldg8_f2f_stages_64x5_tn
+ampere_bf16_s16816gemm_bf16_64x64_sliced1x2_ldg8_f2f_stages_64x6_tn
+aten::argmax
+aten::clone
+aten::contiguous
+aten::copy_
+aten::div_
+aten::embedding
+aten::fill_
+aten::index
+aten::index_select
+aten::linear
+aten::_log_softmax
+aten::log_softmax
+aten::matmul
+aten::mm
+aten::_softmax
+aten::softmax
+aten::sub
+aten::to
+aten::_to_copy
+aten::zero_
+aten::zeros
+_c_cache_ops::reshape_and_cache_flash
+_c::fused_add_rms_norm
+_c::rms_norm
+_c::rotary_embedding
+_c::silu_and_mul
+cudadrivergetversion
+cudaeventrecord
+cudagraphlaunch
+cudastreamiscapturing
+memcpy dtod (device -> device)
+memcpy dtoh (device -> pageable)
+memcpy htod (pageable -> device)
+memcpy htod (pinned -> device)
+memset (device)
+std::enable_if<(((8)>(0)))&&vllm::_typeconvert<c10::bfloat16>::exists, void>::type vllm::fused_add_rms_norm_kernel<c10::bfloat16, 8>(c10::bfloat16*, long, c10::bfloat16*, c10::bfloat16 const*, float, int, int)
+_vllm_fa2_c::varlen_fwd
+vllm::unified_attention_with_output
+void at::native::(anonymous namespace)::cunn_softmaxforward<4, float, float, float, at::native::(anonymous namespace)::logsoftmaxforwardepilogue>(float*, float const*, int)
+void at::native::(anonymous namespace)::cunn_softmaxforward<4, float, float, float, at::native::(anonymous namespace)::softmaxforwardepilogue>(float*, float const*, int)
+void at::native::(anonymous namespace)::indexselectsmallindex<c10::bfloat16, long, unsigned int, 2, 2, -2>(at::cuda::detail::tensorinfo<c10::bfloat16, unsigned int>, at::cuda::detail::tensorinfo<c10::bfloat16 const, unsigned int>, at::cuda::detail::tensorinfo<long const, unsigned int>, int, int, unsigned int, long)
+void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::cudafunctor_add<int> >(at::tensoriteratorbase&, at::native::cudafunctor_add<int> const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::cudafunctor_add<int> >(at::tensoriteratorbase&, at::native::cudafunctor_add<int> const&)::{lambda(int)#1})
+void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl<at::native::binaryfunctor<float, float, float, at::native::binary_internal::divfunctor<float> > >(at::tensoriteratorbase&, at::native::binaryfunctor<float, float, float, at::native::binary_internal::divfunctor<float> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl<at::native::binaryfunctor<float, float, float, at::native::binary_internal::divfunctor<float> > >(at::tensoriteratorbase&, at::native::binaryfunctor<float, float, float, at::native::binary_internal::divfunctor<float> > const&)::{lambda(int)#1})
+void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::tensoriteratorbase&)::{lambda()#3}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::bfloat16)#1}>(at::tensoriteratorbase&, at::native::direct_copy_kernel_cuda(at::tensoriteratorbase&)::{lambda()#3}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::bfloat16)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::tensoriteratorbase&)::{lambda()#3}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::bfloat16)#1}>(at::tensoriteratorbase&, at::native::direct_copy_kernel_cuda(at::tensoriteratorbase&)::{lambda()#3}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::bfloat16)#1} const&)::{lambda(int)#1})
+void at::native::index_elementwise_kernel<128, 4, at::native::gpu_index_kernel<at::native::index_kernel_impl<at::native::opaquetype<4> >(at::tensoriteratorbase&, c10::arrayref<long>, c10::arrayref<long>)::{lambda(char*, char const*, long)#1}>(at::tensoriteratorbase&, c10::arrayref<long>, c10::arrayref<long>, at::native::index_kernel_impl<at::native::opaquetype<4> >(at::tensoriteratorbase&, c10::arrayref<long>, c10::arrayref<long>)::{lambda(char*, char const*, long)#1} const&)::{lambda(int)#1}>(long, at::native::gpu_index_kernel<at::native::index_kernel_impl<at::native::opaquetype<4> >(at::tensoriteratorbase&, c10::arrayref<long>, c10::arrayref<long>)::{lambda(char*, char const*, long)#1}>(at::tensoriteratorbase&, c10::arrayref<long>, c10::arrayref<long>, at::native::index_kernel_impl<at::native::opaquetype<4> >(at::tensoriteratorbase&, c10::arrayref<long>, c10::arrayref<long>)::{lambda(char*, char const*, long)#1} const&)::{lambda(int)#1})
+void at::native::reduce_kernel<512, 1, at::native::reduceop<float, at::native::argmaxops<float>, unsigned int, long, 4, 4> >(at::native::reduceop<float, at::native::argmaxops<float>, unsigned int, long, 4, 4>)
+void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::tensoriteratorbase&)::{lambda()#3}::operator()() const::{lambda()#4}::operator()() const::{lambda(long)#1}, std::array<char*, 2ul>, 4, trivialoffsetcalculator<1, unsigned int>, trivialoffsetcalculator<1, unsigned int>, at::native::memory::loadwithcast<1>, at::native::memory::storewithcast<1> >(int, at::native::direct_copy_kernel_cuda(at::tensoriteratorbase&)::{lambda()#3}::operator()() const::{lambda()#4}::operator()() const::{lambda(long)#1}, std::array<char*, 2ul>, trivialoffsetcalculator<1, unsigned int>, trivialoffsetcalculator<1, unsigned int>, at::native::memory::loadwithcast<1>, at::native::memory::storewithcast<1>)
+void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::tensoriteratorbase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>, 4, trivialoffsetcalculator<1, unsigned int>, trivialoffsetcalculator<1, unsigned int>, at::native::memory::loadwithcast<1>, at::native::memory::storewithcast<1> >(int, at::native::direct_copy_kernel_cuda(at::tensoriteratorbase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>, trivialoffsetcalculator<1, unsigned int>, trivialoffsetcalculator<1, unsigned int>, at::native::memory::loadwithcast<1>, at::native::memory::storewithcast<1>)
+void at::native::vectorized_elementwise_kernel<4, at::native::fillfunctor<c10::bfloat16>, std::array<char*, 1ul> >(int, at::native::fillfunctor<c10::bfloat16>, std::array<char*, 1ul>)
+void cublaslt::splitkreduce_kernel<32, 16, int, __nv_bfloat16, __nv_bfloat16, float, false, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, true, false, false>(cublaslt::cublassplitkparams<float>, __nv_bfloat16 const*, __nv_bfloat16 const*, __nv_bfloat16*, __nv_bfloat16*, float const*, float const*, __nv_bfloat16 const*, __nv_bfloat16 const*, __nv_bfloat16*, void*, long, float*, int*, float*, float const*, float const*, float const*, float const*)
+void cutlass::kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8>(cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8::params)
+void flash::flash_fwd_splitkv_combine_kernel<flash_fwd_kernel_traits<128, 64, 128, 4, false, false, cutlass::bfloat16_t, flash_kernel_traits<128, 64, 128, 4, cutlass::bfloat16_t> >, 4, 4, true>(flash::flash_fwd_params)
+void flash::flash_fwd_splitkv_kernel<flash_fwd_kernel_traits<128, 64, 128, 4, false, false, cutlass::bfloat16_t, flash_kernel_traits<128, 64, 128, 4, cutlass::bfloat16_t> >, false, false, false, false, true, false, true, false>(flash::flash_fwd_params)
+void flash::flash_fwd_splitkv_kernel<flash_fwd_kernel_traits<128, 64, 128, 4, false, false, cutlass::bfloat16_t, flash_kernel_traits<128, 64, 128, 4, cutlass::bfloat16_t> >, true, false, false, false, true, false, false, false>(flash::flash_fwd_params)
+void gemv2t_kernel_val<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 128, 16, 4, 4, false, false, cublasgemvparamsex<int, cublasgemvtensorstridedbatched<__nv_bfloat16 const>, cublasgemvtensorstridedbatched<__nv_bfloat16 const>, cublasgemvtensorstridedbatched<__nv_bfloat16>, float> >(cublasgemvparamsex<int, cublasgemvtensorstridedbatched<__nv_bfloat16 const>, cublasgemvtensorstridedbatched<__nv_bfloat16 const>, cublasgemvtensorstridedbatched<__nv_bfloat16>, float>, float, float)
+void vllm::act_and_mul_kernel<c10::bfloat16, &(c10::bfloat16 vllm::silu_kernel<c10::bfloat16>(c10::bfloat16 const&)), true>(c10::bfloat16*, c10::bfloat16 const*, int)
+void vllm::reshape_and_cache_flash_kernel<__nv_bfloat16, __nv_bfloat16, (vllm::fp8kvcachedatatype)0>(__nv_bfloat16 const*, __nv_bfloat16 const*, __nv_bfloat16*, __nv_bfloat16*, long const*, long, long, long, long, long, int, int, int, float const*, float const*)
+void vllm::rms_norm_kernel<c10::bfloat16>(c10::bfloat16*, c10::bfloat16 const*, long, c10::bfloat16 const*, float, int, int)
+void vllm::rotary_embedding_kernel<c10::bfloat16, true>(long const*, c10::bfloat16*, c10::bfloat16*, c10::bfloat16 const*, int, long, long, long, int, int, int)

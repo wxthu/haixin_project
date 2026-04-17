@@ -1,0 +1,12 @@
+VT accuracy summary by max sequence length and strategy
+score(item) = len(intersection) / len(ground_truth_set)
+table value = average score over all items in file
+
+maxseq | raw    | llmlingua | llmlingua_elbow | llmlingua_new_elbow | llmlingua_mass_80
+-------+--------+-----------+-----------------+---------------------+------------------
+2048   | 0.9976 | 0.9984    | 0.9972          | 0.9088              | 0.7672           
+4096   | 0.9976 | 0.9992    | 0.9972          | 0.7680              | 0.4616           
+6144   | 0.9960 | 0.9944    | 0.9928          | 0.6940              | 0.3424           
+8192   | 0.9372 | 0.9948    | 0.9996          | 0.7172              | 0.3456           
+16384  | 0.9000 | 0.9936    | 0.9872          | 0.5960              | 0.2256           
+30000  | 0.9372 | 0.9772    | 0.9788          | 0.5904              | 0.1968           

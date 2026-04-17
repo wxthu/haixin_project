@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "model": "SeerAttention/SeerAttention-Decode-Qwen3-8B-AttnGates",
+    "jsonl": "media_long_context.jsonl",
+    "field": "content",
+    "max_new_tokens": 512,
+    "device": "cuda",
+    "sparsity_method": "token_budget",
+    "token_budget": 4096,
+    "batch_sizes": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "note": "",
+    "cuda_visible_devices": "6"
+  },
+  "results": [
+    {
+      "type": "ok",
+      "batch_size": 1.0,
+      "prompt_tokens_per_sample": 6666.0,
+      "prompt_tokens_total": 6666.0,
+      "new_tokens_per_sample": 512.0,
+      "new_tokens_total": 512.0,
+      "prefill_s": 1.629585807211697,
+      "decode_s": 51.694528362713754,
+      "total_s": 53.32411416992545,
+      "prefill_prompt_tok_per_s": 4090.610000712917,
+      "decode_new_tok_per_s": 9.904336420434305
+    },
+    {
+      "type": "ok",
+      "batch_size": 2.0,
+      "prompt_tokens_per_sample": 6666.0,
+      "prompt_tokens_total": 13332.0,
+      "new_tokens_per_sample": 512.0,
+      "new_tokens_total": 1024.0,
+      "prefill_s": 2.6217078771442175,
+      "decode_s": 31.15406460594386,
+      "total_s": 33.775772483088076,
+      "prefill_prompt_tok_per_s": 5085.234749541328,
+      "decode_new_tok_per_s": 32.86890532430339
+    },
+    {
+      "type": "ok",
+      "batch_size": 4.0,
+      "prompt_tokens_per_sample": 6666.0,
+      "prompt_tokens_total": 26664.0,
+      "new_tokens_per_sample": 512.0,
+      "new_tokens_total": 2048.0,
+      "prefill_s": 5.35865004081279,
+      "decode_s": 31.203508752398193,
+      "total_s": 36.56215879321098,
+      "prefill_prompt_tok_per_s": 4975.880081162317,
+      "decode_new_tok_per_s": 65.63364448052971
+    },
+    {
+      "type": "oom",
+      "batch_size": 8,
+      "error": "OutOfMemoryError('CUDA out of memory. Tried to allocate 15.09 GiB. GPU 0 has a total capacity of 44.43 GiB of which 13.24 GiB is free. Including non-PyTorch memory, this process has 31.18 GiB memory in use. Of the allocated memory 23.16 GiB is allocated by PyTorch, and 7.71 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)')"
+    },
+    {
+      "type": "oom",
+      "batch_size": 16,
+      "error": "OutOfMemoryError('CUDA out of memory. Tried to allocate 30.19 GiB. GPU 0 has a total capacity of 44.43 GiB of which 8.08 GiB is free. Including non-PyTorch memory, this process has 36.35 GiB memory in use. Of the allocated memory 30.99 GiB is allocated by PyTorch, and 5.04 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)')"
+    }
+  ]
+}

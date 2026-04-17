@@ -1,0 +1,12 @@
+metrics: token_f1 (SQuAD multiset, normalized; max over answers[]) for most tasks; dureader = ROUGE-L F1 via rouge-score (char tokenizer; max over answers[])
+root=/home/wangxiang/haixin_long_context
+
+task                    | raw      | llmlingua | elbow_one | elbow_two | mass_75 
+------------------------+----------+-----------+-----------+-----------+---------
+hotpotqa (200)          | 0.644962 | 0.569637  | 0.614458  | 0.606527  | 0.597960
+narrativeqa (200)       | 0.289966 | 0.266886  | 0.296580  | 0.260765  | 0.255679
+multifieldqa_en (150)   | 0.448623 | 0.408516  | 0.451873  | 0.421764  | 0.426415
+multifieldqa_zh (200)   | 0.305000 | 0.225000  | 0.305000  | 0.217500  | 0.217500
+qasper (200)            | 0.434506 | 0.451923  | 0.441098  | 0.448723  | 0.446231
+2wikimqa (200)          | 0.732520 | 0.615193  | 0.721353  | 0.685783  | 0.671278
+dureader (200) [rougeL] | 0.144362 | 0.139343  | 0.145688  | 0.142916  | 0.144930
